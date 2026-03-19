@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Media CSS -->
+    <link rel="stylesheet" href="css/media.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Left Side: Form Section -->
+        <div class="left-side">
+            <div class="login-card">
+                <!-- Logo Area -->
+                <div class="logo-area">
+                    <div class="logo-wrapper">
+                       <a href="#" >
+                        <img src="/images/logo.svg" alt="" class="brand-logo">
+                       </a>
+                    </div>
+                    
+                    <!-- Language Switcher -->
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="uz">UZ</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <!-- Welcome Text -->
+                <div class="welcome-section">
+                    <h1 class="welcome-title" data-i18n="welcome_title">
+                        Войти в вашу <br /> учётную запись
+                    </h1>
+                    <p class="welcome-desc" data-i18n="welcome_desc">
+                        Avtorizatsiya qilish uchun "@xb.uz" belgisini kiritmang.
+                    </p>
+                </div>
+
+                <!-- Form -->
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="username"
+                            placeholder="Имя пользователя"
+                            data-i18n-placeholder="username_placeholder"
+                            class="form-input"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i data-lucide="lock"></i>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="password"
+                            placeholder="Пароль"
+                            data-i18n-placeholder="password_placeholder"
+                            class="form-input"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i data-lucide="help-circle"></i>
+                        </div>
+                        <select 
+                            id="source"
+                            class="form-input form-select"
+                        >
+                            <option value="Xalq Bank Head Office" data-i18n="source_option">Xalq Bank Head Office</option>
+                        </select>
+                        <i data-lucide="chevron-down" class="select-arrow"></i>
+                    </div>
+
+                    <div class="checkbox-area">
+                        <input 
+                            type="checkbox" 
+                            id="remember"
+                            checked
+                            class="checkbox-input"
+                        >
+                        <label for="remember" class="checkbox-label" data-i18n="remember_me">Запомнить меня</label>
+                    </div>
+
+                    <button 
+                        type="submit"
+                        class="submit-btn"
+                        data-i18n="login_button"
+                    >
+                        Войти
+                    </button>
+                </form>
+            </div>
+
+            <!-- Bottom Floating Card -->
+            <div class="info-card">
+                <div class="user-avatars-section" style="display: flex; align-items: center; gap: 1rem;">
+                    <div class="user-avatars">
+                        <div class="avatar">
+                            <img src="https://picsum.photos/seed/user1/100/100" alt="User">
+                        </div>
+                        <div class="avatar">
+                            <img src="https://picsum.photos/seed/user2/100/100" alt="User">
+                        </div>
+                        <div class="avatar">
+                            <img src="https://picsum.photos/seed/user3/100/100" alt="User">
+                        </div>
+                    </div>
+                    <div class="info-text">
+                        <span class="info-title" data-i18n="info_title">Batafsil qo'llanma bilan tanishib chiqing</span>
+                        <span class="info-sub" data-i18n="info_sub">Инструкция по использованию ITSM</span>
+                    </div>
+                </div>
+                <button class="action-btn">
+                    <i data-lucide="arrow-up-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Side: Visual Section -->
+        <div class="visual-side">
+            <!-- Top Text Overlay -->
+            <div class="visual-title-container">
+                <h2 class="visual-title" data-i18n="visual_title">
+                    Avtorizatsiya: <br />
+                    <span data-i18n="visual_subtitle">Xalq Banki xodimlari uchun maxsus portal.</span>
+                </h2>
+            </div>
+
+            <!-- Center Visual (Abstract 3D Shape) -->
+            <div class="shape-container">
+                <div class="abstract-shape">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#FFFFFF" d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,77.4,-44.7C85.6,-31.3,90.8,-15.7,90.2,-0.3C89.7,15,83.4,30,75.2,43.4C67,56.8,56.8,68.7,43.4,76.9C30,85.1,15,89.7,0.3,89.2C-14.4,88.7,-28.8,83.1,-42.2,74.9C-55.6,66.7,-68,55.9,-76.2,42.5C-84.4,29.1,-88.4,13.1,-87.8,-2.8C-87.2,-18.7,-82,-34.5,-72.8,-47.1C-63.6,-59.7,-50.3,-69.1,-36.9,-76.3C-23.5,-83.5,-10,-88.5,3.5,-89.2C17,-89.9,31.3,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Bottom Info Card -->
+            <div class="glass-card">
+                <div class="glass-header">
+                    <div class="status-badge">
+                        <div class="status-dot"></div>
+                        <span class="status-text">Tizim</span>
+                    </div>
+                    <div class="glass-actions">
+                        <div class="circle-icon">
+                            <i data-lucide="arrow-up-right" class="rotate-180"></i>
+                        </div>
+                        <div class="circle-icon white-bg">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="glass-note" data-i18n="glass_note">
+                    * Eslatma: shablonlardagi matnni xohlaganingizcha o'zgartirishingiz mumkin. Shablon ma'lumotni to'ldirish qulayligi uchun yaratilgan.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Js -->
+    <script src="js/app.js"></script>
+</body>
+</html>
